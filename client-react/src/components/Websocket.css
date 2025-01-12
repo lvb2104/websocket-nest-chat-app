@@ -1,0 +1,128 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 100%;
+    max-width: 800px;
+    height: 80vh;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin: 20px 0;
+}
+
+.chat-messages {
+    flex: 1;
+    padding: 20px;
+    overflow-y: auto;
+    background-color: #e9ecef;
+}
+
+.message {
+    margin-bottom: 15px;
+    padding: 10px 15px;
+    background-color: #ffffff;
+    border-radius: 20px;
+    max-width: 70%;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.message strong {
+    display: block;
+    margin-bottom: 5px;
+    color: #007bff;
+}
+
+.message.user {
+    background-color: #007bff;
+    color: #ffffff;
+    align-self: flex-end;
+}
+
+.message.user strong {
+    color: #ffffff;
+}
+
+.input-area {
+    display: flex;
+    padding: 10px;
+    background-color: #f8f9fa;
+    border-top: 1px solid #ddd;
+}
+
+input[type='text'] {
+    flex: 1;
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    font-size: 16px;
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 600px) {
+    .container {
+        height: 90vh; /* Increase height for smaller screens */
+    }
+
+    .input-area {
+        flex-direction: column; /* Stack input and button */
+    }
+
+    input[type='text'] {
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 10px; /* Add bottom margin */
+    }
+
+    button {
+        width: 100%; /* Full width button */
+    }
+}
+
+@media (max-width: 400px) {
+    h1 {
+        font-size: 1.5em; /* Smaller font size for the title */
+    }
+
+    .message {
+        padding: 8px 12px; /* Smaller padding for messages */
+    }
+
+    input[type='text'],
+    button {
+        font-size: 14px; /* Smaller font size for inputs and buttons */
+    }
+}
